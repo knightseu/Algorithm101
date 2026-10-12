@@ -24,6 +24,10 @@ func main() {
 	fmt.Println("===")
 	cards := deck{newCard(), "Ace of Diamond"}
 	cards.print()
+
+	fmt.Println("---")
+	cards = newDeck()
+	cards.print()
 }
 
 func newCard() string {
