@@ -10,17 +10,22 @@ func main() {
 	fmt.Println(card)
 
 	/////
-	cards := []string{newCard(), "Ace of Diamond"} //slice
-	fmt.Println((cards))                           // [Three of Club Ace of Diamond]
-	cards = append(cards, "Six of Spades")
-	fmt.Println((cards)) //[Three of Club Ace of Diamond Six of Spades]
+	// cards := []string{newCard(), "Ace of Diamond"} //slice
+	// fmt.Println((cards))                           // [Three of Club Ace of Diamond]
+	// cards = append(cards, "Six of Spades")
+	// fmt.Println((cards)) //[Three of Club Ace of Diamond Six of Spades]
 
-	fmt.Println("---")
+	// fmt.Println("---")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	// for i, card := range cards {
+	// 	fmt.Println(i, card)
+	// }
+
+	fmt.Println("===")
+	cards := deck{newCard(), "Ace of Diamond"}
+	cards.print()
 }
+
 func newCard() string {
 	return "Three of Club"
 }
