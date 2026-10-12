@@ -28,6 +28,10 @@ func main() {
 	fmt.Println("---")
 	cards = newDeck()
 	cards.print()
+	hands, remainingCards := deal(cards, 5)
+	hands.print()
+	fmt.Println("***")
+	remainingCards.print()
 }
 
 func newCard() string {
