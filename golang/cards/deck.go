@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand/v2"
+
 	// "ioutil"
 	"os"
 	"strings"
@@ -48,6 +50,13 @@ func newDeckFromFile(filename string) deck {
 	}
 	s := strings.Split(string(bs), ",")
 	return deck(s)
+}
+
+func (d deck) shuffle() {
+	for i := range d {
+		newPosition := rand.IntN(len(d) - 1)
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
 }
 
 func (d deck) print() {
