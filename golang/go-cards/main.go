@@ -6,8 +6,8 @@ func main() {
 	// var card string = "Ace of Spades"
 	// card := "Ace of Diamond"
 	// card = "Five of Heart"
-	card := newCard()
-	fmt.Println(card)
+	// card := newCard()
+	// fmt.Println(card)
 
 	/////
 	// cards := []string{newCard(), "Ace of Diamond"} //slice
@@ -21,17 +21,27 @@ func main() {
 	// 	fmt.Println(i, card)
 	// }
 
-	fmt.Println("===")
-	cards := deck{newCard(), "Ace of Diamond"}
-	cards.print()
+	// fmt.Println("===")
+	// cards := deck{newCard(), "Ace of Diamond"}
+	// cards.print()
 
-	fmt.Println("---")
-	cards = newDeck()
+	// fmt.Println("---")
+	cards := newDeck()
 	cards.print()
-	hands, remainingCards := deal(cards, 5)
-	hands.print()
-	fmt.Println("***")
-	remainingCards.print()
+	// hands, remainingCards := deal(cards, 5)
+	// hands.print()
+	// fmt.Println("***")
+	// remainingCards.print()
+
+	//
+	// greeting := "Hi there!"
+	// fmt.Println([]byte(greeting))
+	fmt.Println(cards.toString())
+
+	cards.saveToFile("my_cards")
+
+	cards = newDeckFromFile("my_cards")
+	cards.print()
 }
 
 func newCard() string {
